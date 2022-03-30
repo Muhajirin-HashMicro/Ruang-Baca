@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="perpus_menu_root"
+        name="Ruang Buku"
+        sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="buku_menu_categ" name="Buku" parent="perpus_menu_root" sequence="10"/>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="transaksi_menu_categ" name="Transaksi" parent="perpus_menu_root" sequence="10"/>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="partner_menu_categ" name="Partner" parent="perpus_menu_root" sequence="10"/>
+
+
+</odoo>

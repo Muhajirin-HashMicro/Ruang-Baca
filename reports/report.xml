@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_report_perpus_peminjaman" model="ir.actions.report">
+        <field name="name">Report Peminjaman</field>
+        <field name="model">perpus.peminjaman</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">perpustakaan.report_perpus_peminjaman</field>
+        <field name="report_file">perpustakaan.report_perpus_peminjaman</field>
+        <field name="print_report_name">'%s' % object.name</field>
+        <field name="binding_model_id" ref="model_perpus_peminjaman"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="action_report_perpus_pengembalian" model="ir.actions.report">
+        <field name="name">Report Pengembalian</field>
+        <field name="model">perpus.pengembalian</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">perpustakaan.report_perpus_pengembalian</field>
+        <field name="report_file">perpustakaan.report_perpus_pengembalian</field>
+        <field name="print_report_name">'%s' % object.name</field>
+        <field name="binding_model_id" ref="model_perpus_pengembalian"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

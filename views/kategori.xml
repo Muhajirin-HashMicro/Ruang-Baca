@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- perpus.kategori tree view -->
+    <record id="model_name_view_tree" model="ir.ui.view">
+        <field name="name">Kategori Buku</field>
+        <field name="model">perpus.kategori</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="deskripsi"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- perpus.kategori action window -->
+    <record id="kategori_action" model="ir.actions.act_window">
+        <field name="name">Kategori Buku</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">perpus.kategori</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="kategori_menu_act" name="Kategori Buku" parent="buku_menu_categ" action="kategori_action" sequence="10"/>
+
+</odoo>

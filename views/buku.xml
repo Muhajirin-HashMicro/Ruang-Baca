@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- perpus.buku action window -->
+    <record id="buku_action" model="ir.actions.act_window">
+        <field name="name">Daftar Buku</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">perpus.buku</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="buku_menu_act" name="Buku" parent="buku_menu_categ" action="buku_action" sequence="10"/>
+
+
+    <!-- perpus.buku tree view -->
+    <record id="buku_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Buku</field>
+        <field name="model">perpus.buku</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="image" widget="image" class="oe_avatar"/>
+                <field name="penulis_id"/>
+                <field name="publisher_id"/>
+                <field name="tgl_publish"/>
+                <field name="kategori_ids" widget="many2many_tags"/>
+                <field name="stok"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- perpus.buku form view -->
+    <record id="buku_view_form" model="ir.ui.view">
+        <field name="name">Form Buku</field>
+        <field name="model">perpus.buku</field>
+        <field name="arch" type="xml">
+            <form string="Form Buku">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="image" widget="image"/>
+                        <field name="penulis_id"/>
+                        <field name="publisher_id"/>
+                        <field name="tgl_publish"/>
+                        <field name="rak_id"/>
+                        <field name="kategori_ids" widget="many2many_tags"/>
+                        <field name="stok"/>
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

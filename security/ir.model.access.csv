@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_perpus_buku,access.perpus.buku,model_perpus_buku,,1,1,1,1
+access_perpus_kategori,access.perpus.kategori,model_perpus_kategori,,1,1,1,1
+access_perpus_rak,access.perpus.rak,model_perpus_rak,,1,1,1,1
+access_perpus_peminjaman,access.perpus.peminjaman,model_perpus_peminjaman,,1,1,1,1
+access_perpus_detailpeminjaman,access.perpus.detailpeminjaman,model_perpus_detailpeminjaman,,1,1,1,1
+access_perpus_pengembalian,access.perpus.pengembalian,model_perpus_pengembalian,,1,1,1,1

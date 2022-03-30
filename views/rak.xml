@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- perpus.rak tree view -->
+    <record id="model_name_view_tree" model="ir.ui.view">
+        <field name="name">Rak Buku</field>
+        <field name="model">perpus.rak</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="lokasi"/>
+                <field name="lantai"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <!-- perpus.rak action window -->
+    <record id="rak_action" model="ir.actions.act_window">
+        <field name="name">Rak Buku</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">perpus.rak</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="rak_menu_act" name="Rak Buku" parent="buku_menu_categ" action="rak_action" sequence="10"/>
+
+</odoo>
